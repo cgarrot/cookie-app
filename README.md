@@ -1,6 +1,7 @@
 # 🍪 Cookie Counter App
 
 A simple and fun cookie counter app built with Next.js and Tailwind CSS.
+It now includes an experimental AI backend to analyze cookie menus and trays.
 
 ## Features
 
@@ -9,6 +10,8 @@ A simple and fun cookie counter app built with Next.js and Tailwind CSS.
 - Responsive design
 - Cookie count display
 - Reset functionality
+- Analyze cookie menus with GPT-4o
+- Count cookies on trays using AI
 
 ## Getting Started
 
@@ -28,6 +31,14 @@ yarn dev
 pnpm dev
 ```
 
+To enable AI analysis you also need to run the Fastify API server:
+
+```bash
+npm run server
+```
+
+Create a `.env` file based on `.env.example` and set your `OPENAI_API_KEY`.
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Built With
@@ -43,3 +54,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 3. Use the "Reset Cookies" button to start over
 
 Enjoy collecting cookies! 🍪
+
+You can also visit `/menu` to analyze a cookie menu, `/tray` to upload tray
+photos for counting, and `/analytics` to view stats.
