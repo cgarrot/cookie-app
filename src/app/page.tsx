@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [cookies, setCookies] = useState(0);
@@ -53,8 +54,15 @@ export default function Home() {
           )}
         </div>
 
-        <div className="mt-8 text-sm text-gray-400">
-          <p>Made with Next.js & Tailwind CSS</p>
+        <div className="mt-8 space-y-2 text-sm text-gray-600">
+          <p>
+            <Link className="text-blue-600 underline" href="/menu">Analyze Menu</Link>
+            {" | "}
+            <Link className="text-blue-600 underline" href="/tray">Analyze Trays</Link>
+            {" | "}
+            <Link className="text-blue-600 underline" href="/analytics">Analytics</Link>
+          </p>
+          <p className="text-gray-400">Made with Next.js & Tailwind CSS</p>
         </div>
       </div>
     </div>
